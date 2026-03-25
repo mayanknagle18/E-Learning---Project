@@ -1,11 +1,16 @@
 import React, { useState } from 'react'; 
 import { Nav, Tab } from "react-bootstrap";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Auth = () => {
     const [activeKey, setActiveKey] = useState("login");
     const [checked, setChecked] = useState(false);
     const [loginImage, setLoginImage] = useState(true);
+    const navigate = useNavigate();
+    const goToHome = () => {
+        navigate("/");
+    }
+
     return (
         <div className="el_auth_main">
             <div className="el_auth_wrapper"> 
@@ -48,8 +53,8 @@ const Auth = () => {
                                             <Link to="#" className="el_auth_link">Forgot Password?</Link>
                                         </div>
                                         <div className="el_auth_btn_wrap">
-                                            <button type="submit" className="el_btn el_primary_btn el_btn_rounded">Back</button>
-                                            <button type="submit" className="el_btn el_primary_btn el_btn_rounded">Login</button>
+                                            <button type="button" className="el_btn el_primary_btn el_btn_rounded" onClick={goToHome}>Back</button>
+                                            <button type="button" className="el_btn el_primary_btn el_btn_rounded">Login</button>
                                         </div>
                                    </form>
                                 </Tab.Pane> 
@@ -69,8 +74,8 @@ const Auth = () => {
                                             <input type="password" className="el_input el_auth_input" placeholder="Enter your Password"/>
                                         </div> 
                                         <div className="el_auth_btn_wrap">
-                                            <button type="submit" className="el_btn el_primary_btn el_btn_rounded">Back</button>
-                                            <button type="submit" className="el_btn el_primary_btn el_btn_rounded">Register</button>
+                                            <button type="button" className="el_btn el_primary_btn el_btn_rounded" onClick={goToHome}>Back</button>
+                                            <button type="button" className="el_btn el_primary_btn el_btn_rounded">Register</button>
                                         </div>
                                    </form>
                                 </Tab.Pane> 
