@@ -380,7 +380,10 @@
         line-height: 24px;
     }
     .el_auth_btn_wrap .el_btn {
-        min-width: 200px;
+        min-width: 130px;
+    }
+    .el_auth_btn_wrap {
+        gap: 10px;
     }
     .el_auth_tabs .nav .nav-item .nav-link {
         font-size: 15px;
@@ -1750,7 +1753,7 @@
         margin-bottom: 40px;
     }
     .el_auth_btn_wrap .el_btn {
-        min-width: 180px;
+        min-width: 120px;
     }
     // home banner
     .el_home_banner_wrap .el_home_banner_right {

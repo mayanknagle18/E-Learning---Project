@@ -48,6 +48,7 @@ const Auth = () => {
                                             <Link to="#" className="el_auth_link">Forgot Password?</Link>
                                         </div>
                                         <div className="el_auth_btn_wrap">
+                                            <button type="submit" className="el_btn el_primary_btn el_btn_rounded">Back</button>
                                             <button type="submit" className="el_btn el_primary_btn el_btn_rounded">Login</button>
                                         </div>
                                    </form>
@@ -68,6 +69,7 @@ const Auth = () => {
                                             <input type="password" className="el_input el_auth_input" placeholder="Enter your Password"/>
                                         </div> 
                                         <div className="el_auth_btn_wrap">
+                                            <button type="submit" className="el_btn el_primary_btn el_btn_rounded">Back</button>
                                             <button type="submit" className="el_btn el_primary_btn el_btn_rounded">Register</button>
                                         </div>
                                    </form>

@@ -30,8 +30,8 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">  
                     <Form className="el_navbar_form"> 
-                        <Link to="#" className="el_btn el_white_btn el_btn_rounded">Login</Link>
-                        <Link to="#" className="el_btn el_secondary_btn el_btn_rounded">Sign Up</Link>
+                        <Link to="/login" className="el_btn el_white_btn el_btn_rounded">Login</Link>
+                        <Link to="/login" className="el_btn el_secondary_btn el_btn_rounded">Sign Up</Link>
                     </Form> 
                 </Navbar.Collapse> 
             </Navbar>
