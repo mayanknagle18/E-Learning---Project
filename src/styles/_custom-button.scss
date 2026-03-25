@@ -1,0 +1,95 @@
+@use './custom-variables' as *;
+.el_btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    border-radius: 12px; 
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out; 
+    &:hover {
+        transform: scale(1.02);
+    }
+    &:focus-visible {
+        outline: none;
+    }
+}
+.el_btn_rounded {
+    border-radius: 36px;
+}
+.el_primary_btn {
+    background-color: $primary-color;
+    color: $white-color;
+    &:hover {
+        background-color: $primary-color-2; 
+    }
+}
+.el_secondary_btn {
+    background-color: $white-color-2;
+    color: $white-color;
+    &:hover {
+        color: $white-color;
+        background-color: $white-color-3;
+    }
+}
+.el_white_btn {
+    background-color: $white-color;
+    color: $gray-color;
+    &:hover {
+        background-color: $gray-color-2;
+    }
+}
+.el_outline_primary_btn {
+    background-color: $white-color;
+    border-color: $primary-color;
+    color: $primary-color; 
+}
+.el_link_btn {
+    padding: 0;
+    background-color: transparent;
+    color: $primary-color;
+}
+.el_link_more {
+    padding: 0;
+    color: $silver-color;
+    background-color: transparent;
+    text-decoration: underline;
+    font-weight: 400;
+}
+.el_outline_white_btn {
+    background-color: transparent;
+    border-color: $white-color;
+    color: $white-color; 
+    &:hover {
+        background-color: $primary-color-5;
+        border: 1px solid $primary-color-5;
+    }
+}
+.el_blue_btn {
+    background-color: $blue-color-1;
+    color: $white-color;
+    &:hover {
+        background-color: $blue-color-2;
+    }
+}
+@media (max-width: 1199px) {
+    .el_btn {
+        padding: 13px 24px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .el_link_more {
+        padding: 0;
+    }
+}
+@media (max-width: 991px) {
+    .el_btn {
+        padding: 11px 20px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .el_link_more {
+        padding: 0;
+    }
+}

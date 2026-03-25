@@ -1,0 +1,81 @@
+@use './custom-variables' as *;
+.el_label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $gray-color;
+}
+.el_input {
+    width: 100%; 
+    height: 60px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid $light-gray-color;
+    background-color: $white-color;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400; 
+    color: $gray-color;
+    outline: none;
+    transition: all 0.2s ease;
+    &::placeholder {
+        color: $gray-color;
+        opacity: 0.7;
+    } 
+    &:focus {
+        border-color: $primary-color;
+    }
+}
+.el_auth_input {
+    border-radius: 50px;
+    border-color: $primary-color; 
+}
+.el_label_input {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.el_label_input_main {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+}
+.el_textarea {
+    height: 100px;
+}
+.el_select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    padding-right: 28px;
+}
+.el_input_select {
+    position: relative;
+    display: inline-block; 
+    width: 100%;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url("../assets/images/icons/down-gray-arrow-icon.svg");
+        width: 16px;
+        height: 10px;
+        background-size: 12px 8px;
+        background-position: center;
+        background-repeat: no-repeat;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+}
+@media (max-width: 1199px) {
+    .el_label_input_main {
+        gap: 25px;
+    }
+}
+@media (max-width: 991px) {
+    .el_label_input_main {
+        gap: 20px;
+    }
+}
