@@ -1,15 +1,23 @@
-import React, { useState } from 'react'; 
+import React, { useEffect, useState } from 'react'; 
 import { Nav, Tab } from "react-bootstrap";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Auth = () => {
     const [activeKey, setActiveKey] = useState("login");
     const [checked, setChecked] = useState(false);
     const [loginImage, setLoginImage] = useState(true);
     const navigate = useNavigate();
+    const location = useLocation();
     const goToHome = () => {
         navigate("/");
     }
+
+    useEffect(() => { 
+        if (location.state?.tab === "register") {
+            setActiveKey("register");
+            setLoginImage(false);
+        }
+    }, [location.state]);
 
     return (
         <div className="el_auth_main">
