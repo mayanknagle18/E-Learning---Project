@@ -6,18 +6,17 @@ const Auth = () => {
     const [activeKey, setActiveKey] = useState("login");
     const [checked, setChecked] = useState(false);
     const [loginImage, setLoginImage] = useState(true);
+    const initialValues = { username: "" , password: "" };
+    const [formValues, setFormValues] = useState(initialValues);
+    const [formErrors, setFormErrors] = useState({});
+    const [isSubmit, setIsSubmit] = useState(false);
+
     const navigate = useNavigate();
-    const location = useLocation();
-    const loginNavigate = useNavigate();
+    const location = useLocation(); 
+
     const goToHome = () => {
         navigate("/");
-    }
-
-    const handleLogin = (e) => {
-        e.preventDefault();
-        localStorage.setItem("token", "userLoggedIn");
-        loginNavigate("/blog");
-    };
+    } 
 
     useEffect(() => { 
         if (location.state?.tab === "register") {
@@ -25,6 +24,44 @@ const Auth = () => {
             setLoginImage(false);
         }
     }, [location.state]);
+
+    const handleChangeValue = (e) => {
+        const {name, value} = e.target;
+        setFormValues({...formValues, [name]: value});  
+    };
+
+    const handleValueSubmit = (e) => {
+        e.preventDefault();
+        const errors = validateForm(formValues);
+        setFormErrors(errors);               
+        setIsSubmit(true);
+    };
+
+    useEffect(() => {
+        if (Object.keys(formErrors).length === 0 && isSubmit) {
+            console.log("Form Submitted:", formValues);
+        }
+    }, [formErrors, isSubmit, formValues]);
+
+    const validateForm = (values) => {
+        const errors = {}; 
+        if (!values.username) {
+            errors.username = "Username is required!";
+        }
+        else if(!values.username.match(/^[a-zA-Z0-9]+$/)) {
+            errors.username = "Please enter a valid username!";
+        }
+        if (!values.password) {
+            errors.password = "Password is required!";
+        }
+        else if (values.password.length < 4) {
+            errors.password = "Password must be more than 4 characters!";
+        }
+        else if (values.password.length > 10) {
+            errors.password = "Password must be less than 10 characters!";
+        }
+        return errors;
+    };
 
     return (
         <div className="el_auth_main">
@@ -51,14 +88,19 @@ const Auth = () => {
                             <Tab.Content>
                                 <Tab.Pane eventKey="login">
                                    <p>Log in to continue your learning journey and explore new courses tailored just for you.</p>
-                                   <form action="" className="el_form_auth">
+                                    {Object.keys(formErrors).length === 0 && isSubmit && (
+                                        <div className="el_success_msg">Login successful!</div>
+                                    )}
+                                   <form action="" className="el_form_auth" onSubmit={handleValueSubmit}>
                                         <div className="el_label_input">
                                             <label htmlFor="" className="el_label">User name</label>
-                                            <input type="text" className="el_input el_auth_input" placeholder="Enter your User name"/>
+                                            <input type="text" className="el_input el_auth_input" name="username" placeholder="Enter your User name" value={formValues.username} onChange={handleChangeValue}/>
+                                            <p className="el_error">{formErrors.username}</p>
                                         </div>
                                         <div className="el_label_input">
                                             <label htmlFor="" className="el_label">Password</label>
-                                            <input type="password" className="el_input el_auth_input" placeholder="Enter your Password"/>
+                                            <input type="password" className="el_input el_auth_input" name="password" placeholder="Enter your Password" value={formValues.password} onChange={handleChangeValue}/>
+                                            <p className="el_error">{formErrors.password}</p>
                                         </div>
                                         <div className="el_checkbox_link_wrap">
                                             <label className="el_checkbox_container">Remember me
@@ -69,7 +111,7 @@ const Auth = () => {
                                         </div>
                                         <div className="el_auth_btn_wrap">
                                             <button type="button" className="el_btn el_primary_btn el_btn_rounded" onClick={goToHome}>Back</button>
-                                            <button type="button" className="el_btn el_primary_btn el_btn_rounded" onClick={handleLogin}>Login</button>
+                                            <button type="submit" className="el_btn el_primary_btn el_btn_rounded">Login</button>
                                         </div>
                                    </form>
                                 </Tab.Pane> 

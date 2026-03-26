@@ -105,6 +105,15 @@
       color: $gray-color;
       margin-bottom: 40px;
     }
+    .el_error {
+        margin: 10px 0 0 0;
+        color: $red-color;
+    }
+    .el_success_msg {
+        color: $primary-color-4;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
   }
 }
 .el_form_auth {
