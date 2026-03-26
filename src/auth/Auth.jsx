@@ -8,9 +8,16 @@ const Auth = () => {
     const [loginImage, setLoginImage] = useState(true);
     const navigate = useNavigate();
     const location = useLocation();
+    const loginNavigate = useNavigate();
     const goToHome = () => {
         navigate("/");
     }
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        localStorage.setItem("token", "userLoggedIn");
+        loginNavigate("/blog");
+    };
 
     useEffect(() => { 
         if (location.state?.tab === "register") {
@@ -62,7 +69,7 @@ const Auth = () => {
                                         </div>
                                         <div className="el_auth_btn_wrap">
                                             <button type="button" className="el_btn el_primary_btn el_btn_rounded" onClick={goToHome}>Back</button>
-                                            <button type="button" className="el_btn el_primary_btn el_btn_rounded">Login</button>
+                                            <button type="button" className="el_btn el_primary_btn el_btn_rounded" onClick={handleLogin}>Login</button>
                                         </div>
                                    </form>
                                 </Tab.Pane> 

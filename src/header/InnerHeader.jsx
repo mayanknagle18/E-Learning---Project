@@ -5,10 +5,17 @@ import { Dropdown } from 'react-bootstrap';
 import logoImage1 from "../assets/images/thumbnails/logo-gray-img.png";
 import logoImage2 from "../assets/images/thumbnails/logo-white-img.png";
 import userIcon1 from "../assets/images/icons/user-icon1.svg";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const InnerHeader = () => {
-   const [onScrollBody, setOnScrollBody] = useState(false);
+    const [onScrollBody, setOnScrollBody] = useState(false);
+    const logoutNavigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        logoutNavigate("/");
+    };
+
     const handleOnScroll = () => {
         if (window.scrollY > 50) {
             setOnScrollBody(true);
@@ -49,7 +56,7 @@ const InnerHeader = () => {
                             </Dropdown.Toggle> 
                             <Dropdown.Menu>
                                 <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Logout</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2" onClick={handleLogout}>Logout</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
