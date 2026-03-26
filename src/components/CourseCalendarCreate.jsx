@@ -3,9 +3,9 @@ import leftWhiteArrowIcon from "../assets/images/icons/left-arrow-white-icon.svg
 import openBookWhiteIcon from "../assets/images/icons/open-book-white-icon.svg";
 import openBookBlackIcon from "../assets/images/icons/open-book-black-icon.svg";
 import clockWhiteIcon from "../assets/images/icons/clock-white-icon.svg.svg";
-import CourseCalendarEdit from './CourseCalendarEdit';
-import CourseCalendarSelect from './CourseCalendarSelect';
-import CourseCalendarSet from './CourseCalendarSet';
+// import CourseCalendarEdit from './CourseCalendarEdit';
+// import CourseCalendarSelect from './CourseCalendarSelect';
+// import CourseCalendarSet from './CourseCalendarSet';
 import CourseCalendarView from './CourseCalendarView';
 
 const CourseCalendarCreate = () => {

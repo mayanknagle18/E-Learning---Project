@@ -16,6 +16,9 @@ import BlogDetail from "./components/BlogDetail";
 import CourseCalendarCreate from "./components/CourseCalendarCreate";
 import Search from "./components/Search";
 import LiteratureCourse from "./components/LiteratureCourse";
+import ForgotPassword from "./auth/ForgotPassword";
+import PrivateRoute from "./routes/PrivateRoute";
+import PublicRoute from "./routes/PublicRoute";
 
 const App = () => {
   return (
@@ -31,9 +34,10 @@ const App = () => {
           <Route path="/blog-detail" element={<BlogDetail />} />
           <Route path="/search" element={<Search/>} />
           <Route path="/literature-course" element={<LiteratureCourse />} />
+          <Route path="/course-calendar-create" element={<PrivateRoute><CourseCalendarCreate /></PrivateRoute>} />
         </Route> 
-        <Route path="/login" element={<Auth />} /> 
-        <Route path="/course-calendar-create" element={<CourseCalendarCreate />} />
+        <Route path="/login" element={<PublicRoute><Auth /></PublicRoute>} /> 
+        <Route path="/forgot-password" element={<PublicRoute><ForgotPassword /></PublicRoute>} />
       </Routes>
     </BrowserRouter>
   );

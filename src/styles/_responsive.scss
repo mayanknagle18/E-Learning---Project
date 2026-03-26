@@ -1699,6 +1699,16 @@
     .el_pagination ul li button svg {
         width: 24px;
     }
+    // forgot password
+    .el_auth_forgot_pass h4 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .el_auth_forgot_pass p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 991px) {
     .el_main {
@@ -4079,6 +4089,11 @@
     }
     .el_pagination ul li button svg {
         width: 16px;
+    }
+    // forgot password
+    .el_auth_forgot_pass h4 {
+        font-size: 24px;
+        line-height: 30px;
     }
 }
 @media (max-width: 480px) {

@@ -12,8 +12,7 @@ import relatedBlogCardImg3 from "../assets/images/thumbnails/blog-related-img3.p
 
 const BlogDetail = () => {
 
-    const relatedBlogCard = {
-    dots: true,
+    const relatedBlogCard = { 
     infinite: true,
     speed: 500,
     slidesToShow: 2,

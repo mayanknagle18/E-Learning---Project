@@ -22,8 +22,7 @@ import clockGrayIcon from "../assets/images/icons/clock-gray-icon.svg";
 
 const Blog = () => {
 
-  const relatedBlogCard = {
-    dots: true,
+  const relatedBlogCard = { 
     infinite: true,
     speed: 500,
     slidesToShow: 2,

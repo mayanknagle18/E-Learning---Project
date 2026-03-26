@@ -58,7 +58,7 @@ const Auth = () => {
                                                 <input type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)}/>
                                                 <span className="el_checkbox_checkmark"></span>
                                             </label>
-                                            <Link to="#" className="el_auth_link">Forgot Password?</Link>
+                                            <Link to="/forgot-password" className="el_auth_link">Forgot Password?</Link>
                                         </div>
                                         <div className="el_auth_btn_wrap">
                                             <button type="button" className="el_btn el_primary_btn el_btn_rounded" onClick={goToHome}>Back</button>
