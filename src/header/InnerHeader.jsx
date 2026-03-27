@@ -33,11 +33,10 @@ const InnerHeader = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav"> 
-                    <Nav>
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                    <Nav> 
+                        <Nav.Link as={Link} to="/blog">Blog</Nav.Link>  
                         <Nav.Link as={Link} to="/courses">Courses</Nav.Link>  
                         <Nav.Link as={Link} to="#careeers">Careeers</Nav.Link>  
-                        <Nav.Link as={Link} to="/blog">Blog</Nav.Link>  
                         <Nav.Link as={Link} to="#about-us">About Us</Nav.Link>  
                     </Nav> 
                     <div className="el_header_dropdown">
