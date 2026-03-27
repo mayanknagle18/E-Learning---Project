@@ -83,19 +83,25 @@ const Auth = () => {
         setRegisterIsSubmit(true);
     }
 
+    useEffect(() => {
+        if (Object.keys(registerFormErrors).length === 0 && registerIsSubmit) {
+            console.log("Registration Form Submitted:", registerFormValues);
+        }
+    }, [registerFormErrors, registerIsSubmit, registerFormValues]);
+
     const validateRegisterForm = (values) => {
         const errors = {};
         if (!values.username) {
             errors.username = "Username is required!";
+        }
+        else if(!values.username.match(/^[a-zA-Z0-9]+$/)) {
+            errors.username = "Please enter a valid username!";
         }
         if (!values.email) {
             errors.email = "Email is required!";
         }
         else if (!values.email.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)) {
             errors.email = "Please enter a valid email!";
-        }
-        else if(!values.username.match(/^[a-zA-Z0-9]+$/)) {
-            errors.username = "Please enter a valid username!";
         }
         if (!values.password) {
             errors.password = "Password is required!";
