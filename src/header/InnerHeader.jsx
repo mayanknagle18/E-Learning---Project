@@ -36,7 +36,7 @@ const InnerHeader = () => {
                     <Nav> 
                         <Nav.Link as={Link} to="/blog">Blog</Nav.Link>  
                         <Nav.Link as={Link} to="/courses">Courses</Nav.Link>  
-                        <Nav.Link as={Link} to="#careeers">Careeers</Nav.Link>  
+                        <Nav.Link as={Link} to="/careers">Careeers</Nav.Link>  
                         <Nav.Link as={Link} to="#about-us">About Us</Nav.Link>  
                     </Nav> 
                     <div className="el_header_dropdown">

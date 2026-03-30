@@ -19,6 +19,7 @@ import LiteratureCourse from "./components/LiteratureCourse";
 import ForgotPassword from "./auth/ForgotPassword";
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
+import Careers from "./components/Careers";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/blog-detail" element={<BlogDetail />} />
           <Route path="/search" element={<Search/>} />
           <Route path="/literature-course" element={<LiteratureCourse />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/course-calendar-create" element={<PrivateRoute><CourseCalendarCreate /></PrivateRoute>} />
         </Route> 
         <Route path="/login" element={<PublicRoute><Auth /></PublicRoute>} /> 
