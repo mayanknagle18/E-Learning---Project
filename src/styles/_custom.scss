@@ -3234,3 +3234,122 @@
         }
     }
 }
+// careers open positions
+.el_career_open_positions {
+    padding: 100px 0;
+    background-color: $light-blue-color;
+}
+.el_cop_cont {
+    max-width: 400px;
+    width: 100%;
+    h6 {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+}
+.el_cop_tabs {
+    .nav-tabs {
+        justify-content: flex-end;
+        border-bottom: 0;
+        gap: 20px;
+        .nav-item {
+            .nav-link {
+                padding: 10px 20px;
+                font-size: 16px;
+                line-height: 24px;
+                border: 1px solid $gray-color;
+                background-color: transparent;
+                border-radius: 50px;
+                color: $gray-color;
+                &.active {
+                    background-color: $primary-color;
+                    border: 1px solid $primary-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .tab-content {
+        margin-top: 40px;
+    }
+}
+.el_cop_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: $white-color;
+    margin-bottom: 20px;
+    border: 1px solid $light-gray-color;
+    .el_cop_card_left {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        .el_cop_card_img {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $light-gray-color;
+            background-color: $white-color;
+            img {
+                width: 24px;
+                height: auto;
+            }
+        }
+        .el_cop_card_det {
+            h6 {
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 5px;
+                font-weight: 500;
+            }
+            .el_cop_card_tags {
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                span {
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: $silver-color;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .el_cop_card_right {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        .el_btn {
+            padding: 7px 17px;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+    }
+}
+.el_cop_badge {
+    padding: 5px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    &.el_cop_badge_remote {
+        background-color: #e3f5ec;
+        color: #2a7a4e;
+    }
+    &.el_cop_badge_hybrid {
+        background-color: #fff0e0;
+        color: #a0620a;
+    }
+    &.el_cop_badge_onsite {
+        background-color: #e8ecff;
+        color: #3a4ab5;
+    }
+}

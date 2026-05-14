@@ -1,9 +1,15 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Nav, Row, Tab } from 'react-bootstrap';
 import careerIcon1 from "../assets/images/icons/career-course-icon.svg";
 import careerIcon2 from "../assets/images/icons/career-hire-icon.svg";
 import careerIcon3 from "../assets/images/icons/career-learning-icon.svg";
 import careerIcon4 from "../assets/images/icons/career-goal-icon.svg";
+import careerBrushIcon from "../assets/images/icons/career-brush-icon.svg";
+import careerDeveloperIcon from "../assets/images/icons/career-developer-icon.svg";
+import careerHornIcon from "../assets/images/icons/career-horn-icon.svg";
+import careerMechanicIcon from "../assets/images/icons/career-mechanic-icon.svg";
+import careerPaintIcon from "../assets/images/icons/career-paint-icon.svg";
+import carrerSettingIcon from "../assets/images/icons/career-setting-icon.svg";
 
 const Careers = () => {
   return (
@@ -119,6 +125,286 @@ const Careers = () => {
                             </div>
                         </Col>
                     </Row>
+                </div>
+            </div>
+        </section>
+        {/* careers open positions */}
+        <section className="el_career_open_positions">
+            <div className="el_container">
+                <div className="el_cop_cont">
+                    <h6>Open Positions</h6>
+                    <h3>Find your place on the team</h3>
+                </div>
+                <div className="el_cop_tabs">
+                    <Tab.Container defaultActiveKey="allroles"> 
+                        <Nav variant="tabs">
+                            <Nav.Item>
+                                <Nav.Link eventKey="allroles">All Roles</Nav.Link>
+                            </Nav.Item> 
+                            <Nav.Item>
+                                <Nav.Link eventKey="engineering">Engineering</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="design">Design</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="content">Content</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="marketing">Marketing</Nav.Link>
+                            </Nav.Item>
+                        </Nav>  
+                        <Tab.Content>
+                            <Tab.Pane eventKey="allroles">
+                                <ul>
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={careerMechanicIcon} alt="career mechanic icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Senior Frontend Engineer</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Remote</span>
+                                                    <span>5+ years exp.</span>
+                                                    <span>Engneering</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_remote">Remote</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li>
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={careerPaintIcon} alt="career paint icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Product Designer — Learning UX</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Bengaluru / Remote</span>
+                                                    <span>3-5 years exp.</span>
+                                                    <span>Design</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_hybrid">Hybrid</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li>
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={careerDeveloperIcon} alt="career developer icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Curriculum Developer — Tech Tracks</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Remote</span>
+                                                    <span>2-4 years exp.</span>
+                                                    <span>Content</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_remote">Remote</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li>
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={carrerSettingIcon} alt="career setting icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Backend Engineer — Infra & Scale</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Bengaluru</span>
+                                                    <span>4+ years exp.</span>
+                                                    <span>Engneering</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_onsite">Onsite</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li>
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={careerHornIcon} alt="career horn icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Growth Marketing Manager</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Remote</span>
+                                                    <span>3+ years exp.</span>
+                                                    <span>Marketing</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_remote">Remote</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li>
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={careerBrushIcon} alt="career brush icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Brand & Motion Designer</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Remote</span>
+                                                    <span>2-3 years exp.</span>
+                                                    <span>Design</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_hybrid">Hybrid</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </Tab.Pane> 
+                            <Tab.Pane eventKey="engineering">
+                                <ul>
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={careerMechanicIcon} alt="career mechanic icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Senior Frontend Engineer</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Remote</span>
+                                                    <span>5+ years exp.</span>
+                                                    <span>Engneering</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_remote">Remote</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li> 
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={carrerSettingIcon} alt="career setting icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Backend Engineer — Infra & Scale</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Bengaluru</span>
+                                                    <span>4+ years exp.</span>
+                                                    <span>Engneering</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_onsite">Onsite</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li> 
+                                </ul>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="design">
+                                <ul> 
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={careerPaintIcon} alt="career paint icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Product Designer — Learning UX</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Bengaluru / Remote</span>
+                                                    <span>3-5 years exp.</span>
+                                                    <span>Design</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_hybrid">Hybrid</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li>  
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={careerBrushIcon} alt="career brush icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Brand & Motion Designer</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Remote</span>
+                                                    <span>2-3 years exp.</span>
+                                                    <span>Design</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_hybrid">Hybrid</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="content">
+                                <ul> 
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={careerDeveloperIcon} alt="career developer icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Curriculum Developer — Tech Tracks</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Remote</span>
+                                                    <span>2-4 years exp.</span>
+                                                    <span>Content</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_remote">Remote</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li> 
+                                </ul>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="marketing">
+                                <ul> 
+                                    <li className="el_cop_card">
+                                        <div className="el_cop_card_left">
+                                            <div className="el_cop_card_img">
+                                                <img src={careerHornIcon} alt="career horn icon" />
+                                            </div>
+                                            <div className="el_cop_card_det">
+                                                <h6>Growth Marketing Manager</h6>
+                                                <div className="el_cop_card_tags">
+                                                    <span>Remote</span>
+                                                    <span>3+ years exp.</span>
+                                                    <span>Marketing</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="el_cop_card_right">
+                                            <span className="el_cop_badge el_cop_badge_remote">Remote</span>
+                                            <button className="el_btn el_primary_btn el_btn_rounded">Apply Now</button>
+                                        </div>
+                                    </li> 
+                                </ul>
+                            </Tab.Pane>
+                        </Tab.Content>
+                    </Tab.Container>
                 </div>
             </div>
         </section>
